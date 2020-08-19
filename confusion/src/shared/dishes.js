@@ -89,8 +89,7 @@ export const DISHES =
             author: "25 Cent",
             date: "2011-12-02T17:57:28.556094Z"
             }
-        ]
-        },
+        ]                       },
         {
         id: 2,
         name:'Vadonut',
@@ -135,8 +134,7 @@ export const DISHES =
             author: "25 Cent",
             date: "2011-12-02T17:57:28.556094Z"
             }
-        ]
-        },
+        ]                   },
         {
         id: 3,
         name:'ElaiCheese Cake',
