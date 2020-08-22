@@ -3,6 +3,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
+import About from './AboutComponent';
 import Home from './HomeComponent';
 import DishDetail from './DishdetailComponent';
 import {DISHES} from '../shared/dishes';
@@ -20,13 +21,6 @@ class Main extends Component {
       comments: COMMENTS,
       promotions: PROMOTIONS
     };
-  }
-
-  onDishSelect(dishId) {
-      this.setState({selectedDish: dishId});
-      console.log('onDishSelect called in Main Component')
-      console.log(dishId);
-      console.log(this.state);
   }
   
   render() {
@@ -53,6 +47,7 @@ class Main extends Component {
           <Route path="/home" component={homepage} />
           <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
           <Route path='/menu/:dishId' component={DishWithId} />
+          <Route path='/aboutus' component={() => <About leaders={this.state.leaders}/>} />
           <Route exact path='/contactus' component={Contact} />
           <Redirect to='/home' />
         </Switch>
