@@ -4,6 +4,7 @@ import {Control, LocalForm, Errors} from 'react-redux-form';
 import {Link} from 'react-router-dom';
 //import { addComment } from '../redux/ActionCreators';
 import {Loading} from './LoadingComponent';
+import {baseUrl} from '../shared/baseUrl';
 
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
 const minLength = (len) => (val) => val && (val.length >= len);
@@ -104,7 +105,7 @@ function RenderDish(dish) {
     if (dish != null){
         return(
             <Card>
-                <CardImg width='100%' top src={dish.image} />
+                <CardImg width='100%' top src={baseUrl+dish.image} />
                 <CardBody>
                     <CardTitle>{dish.name}</CardTitle>
                     <CardText>{dish.description}</CardText>
