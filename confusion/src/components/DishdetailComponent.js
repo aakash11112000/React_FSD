@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 //import { addComment } from '../redux/ActionCreators';
 import {Loading} from './LoadingComponent';
 import {baseUrl} from '../shared/baseUrl';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import { FadeTransform, Stagger } from 'react-animation-components';
 
 function maxLength(len) {
     return (val) => !(val) || (val.length <= len);
